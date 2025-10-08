@@ -635,7 +635,7 @@ main {
 
 .galerie-images img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   border-radius: var(--border-radius-sm);
   transition: transform var(--transition-fast);
