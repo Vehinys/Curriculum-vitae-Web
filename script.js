@@ -75,3 +75,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+/**
+ * BACK TO TOP - Gestion du bouton de retour en haut
+ * Fichier: back-to-top.js
+ */
+
+// Attendre que le DOM soit complètement chargé
+document.addEventListener('DOMContentLoaded', () => {
+  // Créer le bouton Back to Top
+  const backToTopBtn = document.createElement('button');
+  backToTopBtn.className = 'back-to-top';
+  backToTopBtn.innerHTML = '↑';
+  backToTopBtn.setAttribute('aria-label', 'Retour en haut de la page');
+  backToTopBtn.setAttribute('title', 'Retour en haut');
+  
+  // Ajouter le bouton au body
+  document.body.appendChild(backToTopBtn);
+
+  /**
+   * Afficher/masquer le bouton selon la position du scroll
+   */
+  const toggleButtonVisibility = () => {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollPosition > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  };
+
+  /**
+   * Faire défiler la page vers le haut avec animation fluide
+   */
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  // Event listener sur le scroll
+  window.addEventListener('scroll', toggleButtonVisibility);
+
+  // Event listener sur le clic du bouton
+  backToTopBtn.addEventListener('click', scrollToTop);
+
+  // Vérifier la position initiale au chargement
+  toggleButtonVisibility();
+});
