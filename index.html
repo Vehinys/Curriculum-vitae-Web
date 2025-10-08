@@ -14,6 +14,8 @@
                 <img src="IMAGES/MOI.jpg" alt="Albert Lecomte"> 
                 <span class="logo-text">Albert Lecomte</span>
             </div>
+            
+            <!-- Menu de navigation -->
             <ul>
                 <li><a href="#profil">Profil</a></li>
                 <li><a href="#formation">Formation</a></li>
@@ -21,6 +23,13 @@
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#projets">Projets</a></li>
             </ul>
+
+            <!-- Bouton burger pour mobile -->
+            <button class="burger-menu" aria-label="Menu de navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -37,11 +46,11 @@
                         <h2>Stage UI Designer / Chef de projet</h2>
                         <p class="localisation">📍 Mulhouse, France</p>
                     </div>
+                </div>
 
-                    <!-- Bouton d'action -->
-                  <div class="profil-actions">
-                      <a href="IMAGES\MOI.jpg" class="btn-primary">📥 Télécharger son CV</a>
-                  </div>
+                <!-- Bouton d'action -->
+                <div class="profil-actions">
+                    <a href="IMAGES\MOI.jpg" class="btn-primary">📥 Télécharger son CV</a>
                 </div>
 
                 <!-- À propos -->
@@ -87,7 +96,7 @@
             </div>
         </section>
 
-        <!-- Section Formation (à développer) -->
+        <!-- Section Formation -->
         <section class="formation" id="formation">
             <div class="section-container">
                 <h2>🎓 Formation</h2>
@@ -162,9 +171,9 @@
 
                         - Projet notable : Développement d'un site de vente de thé sur Wordpress, incluant l'optimisation SEO et la création d'un design attrayant.<br>
 
-                        • Collaboration avec l’équipe pour développer des interfaces utilisateurs modernes et fonctionnelles.<br>
+                        • Collaboration avec l'équipe pour développer des interfaces utilisateurs modernes et fonctionnelles.<br>
 
-                        • Développement des compétences en travail d’équipe et en communication pour établir des relations professionnelles solides.<br>
+                        • Développement des compétences en travail d'équipe et en communication pour établir des relations professionnelles solides.<br>
 
                         • Amélioration des compétences en langages de programmation à travers des projets pratiques.<br>
                     </p>
@@ -172,7 +181,7 @@
             </div>
         </section>
 
-        <!-- Section Expérience (à développer) -->
+        <!-- Section Expérience -->
         <section class="experience" id="experience">
           <div class="section-container">
             <h2>💼 Expériences Professionnelles</h2>
@@ -181,9 +190,9 @@
                 <p><strong>Établissement :</strong> BLACKSTORE - CDI  : <a href="https://www.blackstore.fr/" target="_blank">Site</a></p>
                 <p><strong>Dates :</strong> Avril 2023 – Avril 2024</p>
                 <p>
-                    • Réalisation d’un tableau de bord interne avec PHP et MySQL pour la gestion des formations.<br>
+                    • Réalisation d'un tableau de bord interne avec PHP et MySQL pour la gestion des formations.<br>
                     • Utilisation de Bootstrap et JavaScript pour créer des interfaces dynamiques.<br>
-                    • Collaboration avec l’équipe pédagogique pour répondre aux besoins métiers.<br>
+                    • Collaboration avec l'équipe pédagogique pour répondre aux besoins métiers.<br>
                     • Tests, documentation technique, et mise en ligne en environnement local.
                 </p>
             </div>
@@ -221,8 +230,7 @@
           </div>
         </section>
 
-        <!-- Section Compétences (à développer) -->
-
+        <!-- Section Compétences -->
         <section class="competences" id="competences">
             <div class="section-container">
                 <h2>🛠️ Compétences</h2>
@@ -265,18 +273,16 @@
                 <div class="competence-category">
                     <h3>🧠 Soft Skills</h3>
                     <ul>
-                        <li>Autonomie & prise d’initiative</li>
-                        <li>Créativité & sens de l’esthétique</li>
-                        <li>Capacité d’adaptation et apprentissage rapide</li>
+                        <li>Autonomie & prise d'initiative</li>
+                        <li>Créativité & sens de l'esthétique</li>
+                        <li>Capacité d'adaptation et apprentissage rapide</li>
                         <li>Travail en équipe & gestion du temps</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-
-        <!-- Section Projets (à développer) -->
-
+        <!-- Section Projets -->
         <section class="projets" id="projets">
             <div class="section-container">
                 <h2>🚀 Projets</h2>
@@ -322,7 +328,7 @@
                     </p>
                     <p><strong>Technos :</strong> HTML5, CSS3, JavaScript</p>
                     <div class="projet-links">
-                        <a href="https://github.com/Vehinys/Curriculumvitae" target="_blank">📂 GitHub</a>
+                        <a href="https://github.com/Vehinys/Curriculum-vitae-Web" target="_blank">📂 GitHub</a>
                     </div>
                 </div>
 
@@ -384,6 +390,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts JavaScript -->
+    <script src="burger-menu.js"></script>
+    <script src="back-to-top.js"></script>
 </body>
 </html>
