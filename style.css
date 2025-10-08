@@ -1,0 +1,717 @@
+/* ==================== RESET ET BASE ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #1a2332;
+  line-height: 1.6;
+}
+
+/* ==================== HEADER ==================== */
+header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo et image */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: translateY(-2px);
+}
+
+nav img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.25);
+  transition: all 0.3s ease;
+}
+
+nav img:hover {
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.35);
+  transform: scale(1.05);
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2332;
+  letter-spacing: -0.5px;
+}
+
+/* Menu de navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 48px;
+  align-items: center;
+}
+
+nav ul li a {
+  color: #4a5568;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 0;
+  position: relative;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #3498db;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+/* ==================== CONTENU PRINCIPAL ==================== */
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* ==================== SECTION PROFIL ==================== */
+.profil {
+
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.profil::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #3498db, #2ecc71, #9b59b6);
+}
+
+.profil-container {
+  overflow: hidden;
+}
+
+/* En-tête du profil */
+.profil-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 50px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.profil-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.profil-photo {
+  position: relative;
+  z-index: 1;
+}
+
+.profil-photo img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.profil-photo img:hover {
+  transform: scale(1.05) rotate(3deg);
+}
+
+.profil-info {
+  position: relative;
+  z-index: 1;
+}
+
+.profil-info h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profil-info h2 {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.localisation {
+  font-size: 16px;
+  opacity: 0.9;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+/* À propos */
+.profil-about {
+  padding: 50px;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fb 100%);
+}
+
+.profil-about h3 {
+  font-size: 28px;
+  color: #1a2332;
+  margin-bottom: 24px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.profil-about h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.profil-about p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #4a5568;
+  margin-top: 20px;
+}
+
+/* Informations de contact */
+.profil-contact {
+  padding: 50px;
+  background: #ffffff;
+}
+
+.profil-contact h3 {
+  font-size: 28px;
+  color: #1a2332;
+  margin-bottom: 32px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.profil-contact h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.profil-contact ul {
+  list-style: none;
+  display: grid;
+  gap: 20px;
+}
+
+.profil-contact ul li {
+  font-size: 16px;
+  color: #4a5568;
+  padding: 16px 20px;
+  background: #f8f9fb;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.profil-contact ul li:hover {
+  background: #f1f3f6;
+  border-left-color: #3498db;
+  transform: translateX(5px);
+}
+
+.profil-contact ul li strong {
+  color: #1a2332;
+  min-width: 120px;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.profil-contact ul li a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.profil-contact ul li a:hover {
+  color: #2980b9;
+}
+
+/* Disponibilité */
+.profil-availability {
+  padding: 50px;
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+}
+
+.profil-availability h3 {
+  font-size: 28px;
+  color: #1a2332;
+  margin-bottom: 32px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.profil-availability h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.profil-availability p {
+  font-size: 17px;
+  line-height: 2.2;
+  color: #4a5568;
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profil-availability strong {
+  color: #1a2332;
+  font-weight: 700;
+}
+
+/* Boutons d'action */
+.profil-actions {
+  padding: 50px;
+  text-align: center;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 18px 48px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid white;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+}
+
+/* ==================== SECTIONS À DÉVELOPPER ==================== */
+.experience,
+.formation,
+.competences,
+.projets {
+  padding: 60px 50px;
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  min-height: 300px;
+  position: relative;
+}
+
+.experience::before,
+.formation::before,
+.competences::before,
+.profil::before,
+.projets::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #3498db, #2ecc71, #9b59b6);
+  border-radius: 20px 20px 0 0;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
+  padding: 70px 60px 40px;
+  color: #ecf0f1;
+  margin-top: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71, #9b59b6);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-section h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.footer-section p {
+  font-size: 15px;
+  color: #bdc3c7;
+  line-height: 1.9;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 14px;
+}
+
+.footer-section ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 20px;
+}
+
+.footer-section ul li a::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #3498db;
+  padding-left: 25px;
+}
+
+.footer-section ul li a:hover::before {
+  opacity: 1;
+  left: 0;
+}
+
+/* Liens sociaux */
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(52, 152, 219, 0.1);
+  border: 2px solid rgba(52, 152, 219, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-links a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.social-links a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.social-links a img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  position: relative;
+  z-index: 1;
+}
+
+.social-links a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+  border-color: transparent;
+}
+
+/* Bas du footer */
+.footer-bottom {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 15px;
+  color: #95a5a6;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-bottom span {
+  color: #3498db;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom span:hover {
+  color: #2ecc71;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablettes */
+@media (max-width: 968px) {
+  nav {
+    padding: 20px 30px;
+  }
+
+  nav ul {
+    gap: 30px;
+  }
+
+  .profil,
+  .experience,
+  .formation,
+  .competences,
+  .projets {
+    margin: 0 20px 60px;
+  }
+
+  .profil-header {
+    padding: 50px 40px;
+  }
+
+  .profil-about,
+  .profil-contact,
+  .profil-availability,
+  .profil-actions {
+    padding: 40px;
+  }
+
+  .experience,
+  .formation,
+  .competences,
+  .projets {
+    padding: 50px 40px;
+  }
+
+  footer {
+    padding: 60px 30px 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main {
+    padding: 40px 0;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .profil-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+    gap: 30px;
+  }
+
+  .profil-info h1 {
+    font-size: 32px;
+  }
+
+  .profil-info h2 {
+    font-size: 18px;
+  }
+
+  .btn-primary{
+    border: 5px solid white;
+  }
+
+  .profil-about,
+  .profil-contact,
+  .profil-availability,
+  .profil-actions {
+    padding: 35px 25px;
+  }
+
+  .profil-about h3,
+  .profil-contact h3,
+  .profil-availability h3 {
+    font-size: 24px;
+  }
+
+  .profil-about p {
+    font-size: 16px;
+  }
+
+  .profil-contact ul li,
+  .profil-availability p {
+    font-size: 15px;
+  }
+
+  .btn-primary {
+    padding: 16px 40px;
+    font-size: 16px;
+  }
+
+  .experience,
+  .formation,
+  .competences,
+  .projets {
+    padding: 40px 30px;
+    margin: 0 20px 60px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  footer {
+    padding: 50px 20px 30px;
+  }
+}
