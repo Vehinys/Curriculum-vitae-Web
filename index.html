@@ -3,493 +3,583 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Albert Lecomte - Concepteur Designer UI, profil hybride Design × Dev. Disponible pour stage CDUI à Mulhouse.">
+    <meta name="author" content="Albert Lecomte">
+    <meta name="theme-color" content="#0F172A">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Albert Lecomte - Curriculum vitae</title>
+    <title>Albert Lecomte - Concepteur Designer UI | Portfolio & CV</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo-container">
-                <img src="IMAGES/MOI.jpg" alt="Albert Lecomte"> 
-                <span class="logo-text">Albert Lecomte</span>
-            </div>
-            
-            <!-- Menu de navigation -->
-            <ul>
-                <li><a href="#profil">Profil</a></li>
-                <li><a href="#formation">Formation</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
-            </ul>
+    <header role="banner">
+        <nav role="navigation" aria-label="Navigation principale">
+            <div class="nav-container">
+                <div class="logo-container">
+                    <img src="IMAGES/MOI.jpg" alt="Photo de profil d'Albert Lecomte" width="56" height="56"> 
+                    <span class="logo-text">Albert Lecomte</span>
+                </div>
+                
+                <!-- Menu de navigation -->
+                <ul id="navMenu" class="nav-menu">
+                    <li><a href="#profil">Profil</a></li>
+                    <li><a href="#soft-skills">Compétences</a></li>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#experience">Expérience</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
 
-            <!-- Bouton burger pour mobile -->
-            <button class="burger-menu" aria-label="Menu de navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+                <div class="nav-actions">
+                    <!-- Bouton mode sombre/clair -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="Basculer entre le mode clair et sombre" aria-pressed="false">
+                        <span class="sun-icon" aria-hidden="true">☀️</span>
+                        <span class="moon-icon" aria-hidden="true">🌙</span>
+                    </button>
+
+                    <!-- Bouton burger pour mobile -->
+                    <button class="burger-menu" id="burgerMenu" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="navMenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section class="profil" id="profil">
-            <div class="profil-container">
+    <main id="main-content" role="main">
+        <!-- ==================== SECTION PROFIL ==================== -->
+        <section class="profil" id="profil" aria-labelledby="profil-title">
+            <div class="container">
                 <!-- En-tête du profil -->
                 <div class="profil-header">
                     <div class="profil-photo">
-                        <img src="IMAGES/MOI.jpg" alt="Photo de profil - Albert Lecomte">
+                        <img src="IMAGES/MOI.jpg" alt="Portrait professionnel d'Albert Lecomte" width="140" height="140">
                     </div>
                     <div class="profil-info">
-                        <h1>Albert Lecomte</h1>
-                        <h2>Stagiaire Concepteur Designer UI | En formation GRETA</h2>
-                        <p class="localisation">📍 Mulhouse, France</p>
-                    </div> 
-                    <div class="stage-objectif">
-                        <p>🎯 Recherche un stage de 6 semaines en tant que Concepteur Designer UI</p>
-                        <p>📅 Disponibilité : du 23 février au 17 avril 2026, avec une interruption de la semaine 13.</p>
-                        <p>🎨 Objectif : Contribuer à des projets UI/UX et communication digitale sous supervision d'une équipe expérimentée</p>
+                        <h1 id="profil-title">Albert Lecomte</h1>
+                        <p class="profil-subtitle">Concepteur Designer UI | Profil hybride Design × Dev</p>
+                        <p class="profil-location">
+                            <span aria-hidden="true">📍</span>
+                            <span>Mulhouse, France</span>
+                        </p>
                     </div>
-                    <!-- Bouton d'action -->
-                     <div class="profil-actions">
-                        <a href="IMAGES\MOI.jpg" class="btn-primary" target="_blank">📥 Télécharger son CV</a>
-                    </div> 
+                </div>
 
+                <!-- OBJECTIF DE STAGE -->
+                <div class="stage-banner" role="region" aria-labelledby="stage-title">
+                    <h2 id="stage-title" class="stage-title">
+                        <span aria-hidden="true">🎯</span> Recherche de Stage GRETA - Concepteur Designer UI
+                    </h2>
+                    <div class="stage-grid">
+                        <div class="stage-card">
+                            <span class="stage-icon" aria-hidden="true">📅</span>
+                            <div>
+                                <h3>Période</h3>
+                                <p>Du 23 février au 17 avril 2026<br><small>(avec interruption semaine 13)</small></p>
+                            </div>
+                        </div>
+                        <div class="stage-card">
+                            <span class="stage-icon" aria-hidden="true">⏱️</span>
+                            <div>
+                                <h3>Durée</h3>
+                                <p>6 semaines<br>238 heures</p>
+                            </div>
+                        </div>
+                        <div class="stage-card">
+                            <span class="stage-icon" aria-hidden="true">📋</span>
+                            <div>
+                                <h3>Type</h3>
+                                <p>Stage conventionné<br>Formation CDUI</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage-description">
+                        <p><strong>Objectif :</strong> Contribuer à des projets UI/UX et communication digitale au sein d'une équipe expérimentée. Mettre en pratique mes compétences en design d'interfaces, tout en découvrant les méthodologies de travail en agence/entreprise.</p>
+                    </div>
                 </div>
 
                 <!-- À propos -->
-                <div class="profil-about">
-                    <h3>À propos de moi</h3>
-                    <p>
-                        Actuellement en formation Concepteur Designer UI avec une solide expérience en développement Symfony et design graphique. Mon profil hybride me permet d'appréhender les projets web dans leur globalité : de la conception d'interfaces utilisateur à leur réalisation technique. Passionné par la création d'expériences digitales innovantes, je recherche un stage en UI Design ou Chef de Projet pour enrichir ma vision produit et renforcer mes compétences en pilotage de projets.
-                    </p>
+                <div class="about-section">
+                    <h2>À propos de moi</h2>
+                    
+                    <div class="about-highlight">
+                        <p>Designer UI passionné par la création d'interfaces intuitives et accessibles, je transforme les besoins utilisateurs en expériences digitales engageantes.</p>
+                    </div>
+                    
+                    <div class="about-content">
+                        <div class="about-card">
+                            <h3>Mon approche</h3>
+                            <p>Profil hybride design × développement, j'allie créativité visuelle et rigueur technique pour concevoir des interfaces à la fois esthétiques et performantes. Ma double compétence me permet de collaborer efficacement avec les équipes pluridisciplinaires et d'anticiper les contraintes d'intégration.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <h3>Ce qui me caractérise</h3>
+                            <p>Curieux et force de proposition, j'aborde chaque projet avec un esprit analytique et une volonté d'apprendre en continu. Mon parcours en communication et développement web m'a appris l'importance de l'écoute active et de l'adaptabilité face aux enjeux clients.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-value">
+                        <p><strong>💡 Ma valeur ajoutée :</strong> Capacité à intervenir sur toute la chaîne de création (maquettage Figma, intégration HTML/CSS, gestion WordPress) pour un dialogue optimal entre design et développement.</p>
+                    </div>
                 </div>
 
-                <!-- Informations de contact -->
-                <div class="profil-contact">
-                    <h3>Informations de contact</h3>
-                    <ul>
-                        <li>
-                            <strong>Email :</strong> 
-                            <a href="mailto:albert.lecomte1989@gmail.com">albert.lecomte1989@gmail.com</a>
-                        </li>
-                        <li>
-                            <strong>Téléphone :</strong> 
-                            <a href="tel:+33664249900">+33 6 02 64 24 99</a>
-                        </li>
-                        <li>
-                            <strong>LinkedIn :</strong> 
-                            <a href="https://linkedin.com/in/lecomtealbert" target="_blank" >lecomtealbert</a>
-                        </li>
-                        <li>
-                            <strong>GitHub :</strong> 
-                            <a href="https://github.com/Vehinys" target="_blank">Vehinys</a>
-                        </li>
-                    </ul>
+                <!-- Boutons d'action -->
+                <div class="cta-section">
+                    <a href="#contact" class="btn btn-primary">
+                        <span aria-hidden="true">📧</span> Me contacter
+                    </a>
+                    <a href="#projets" class="btn btn-secondary">
+                        <span aria-hidden="true">🎨</span> Voir mon portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION SOFT SKILLS ==================== -->
+        <section class="soft-skills" id="soft-skills" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title">Compétences Comportementales</h2>
+                <p class="section-subtitle">Les soft skills qui font la différence</p>
+                
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <span class="skill-icon" aria-hidden="true">🎨</span>
+                        <h3>Créativité & Innovation</h3>
+                        <p>Proposer des solutions visuelles originales tout en respectant les contraintes du brief.</p>
+                    </article>
+                    
+                    <article class="skill-card">
+                        <span class="skill-icon" aria-hidden="true">🤝</span>
+                        <h3>Collaboration</h3>
+                        <p>Travail en synergie avec développeurs, chefs de projet et clients.</p>
+                    </article>
+                    
+                    <article class="skill-card">
+                        <span class="skill-icon" aria-hidden="true">🔄</span>
+                        <h3>Adaptabilité</h3>
+                        <p>Flexibilité face aux changements et capacité à jongler entre missions variées.</p>
+                    </article>
+                    
+                    <article class="skill-card">
+                        <span class="skill-icon" aria-hidden="true">🎯</span>
+                        <h3>Rigueur</h3>
+                        <p>Attention méticuleuse aux détails et aux normes d'accessibilité web.</p>
+                    </article>
+                    
+                    <article class="skill-card">
+                        <span class="skill-icon" aria-hidden="true">🚀</span>
+                        <h3>Autonomie</h3>
+                        <p>Capacité à mener des projets de A à Z avec peu de supervision.</p>
+                    </article>
+                    
+                    <article class="skill-card">
+                        <span class="skill-icon" aria-hidden="true">🔍</span>
+                        <h3>Curiosité</h3>
+                        <p>Apprentissage continu des nouvelles tendances UI/UX et méthodologies.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION FORMATION ==================== -->
+        <section class="formation" id="formation" aria-labelledby="formation-title">
+            <div class="container">
+                <h2 id="formation-title">Formation</h2>
+                
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <span class="timeline-badge badge-current" aria-label="Formation en cours">En cours</span>
+                        <div class="timeline-content">
+                            <h3>Titre Professionnel Concepteur Designer UI – Niveau 6 (Bac +3)</h3>
+                            <p class="timeline-meta">
+                                <strong>GRETA ALSACE SUD</strong> · Octobre 2025 – Juin 2026 · Mulhouse
+                            </p>
+                            <p>Formation certifiante en conception d'interfaces utilisateur et expérience digitale : de la recherche utilisateur au développement d'interfaces web optimisées.</p>
+                            <ul class="achievements-list">
+                                <li><strong>Design graphique & interfaces :</strong> Conception d'éléments graphiques pour interfaces et supports de communication avec la suite Adobe (Photoshop, Illustrator, InDesign)</li>
+                                <li><strong>UX/UI Design :</strong> Analyse de l'expérience utilisateur, création de wireframes et prototypes interactifs, design thinking et recherche utilisateur</li>
+                                <li><strong>Développement web :</strong> Intégration d'interfaces en HTML5, CSS3 et JavaScript, développement responsive et accessible</li>
+                                <li><strong>CMS & Sites web :</strong> Création, amélioration et animation de sites complets avec WordPress et autres systèmes de gestion de contenu</li>
+                                <li><strong>Gestion de projet digital :</strong> Pilotage et suivi de projets web, méthodologies Agile/Scrum, respect des délais et budgets</li>
+                                <li><strong>Web marketing :</strong> Conception d'interfaces conformes aux stratégies marketing et aux objectifs clients, optimisation des conversions</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">Adobe XD</span>
+                                <span class="tag">Photoshop/Illustrator/InDesign</span>
+                                <span class="tag">HTML/CSS/JavaScript</span>
+                                <span class="tag">WordPress</span>
+                                <span class="tag">UX Research</span>
+                                <span class="tag">Agile/Scrum</span>
+                                <span class="tag">Web Marketing</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <span class="timeline-badge badge-completed" aria-label="Formation terminée">Diplômé</span>
+                        <div class="timeline-content">
+                            <h3>Titre Professionnel Développeur Web et Web Mobile – Niveau 5 (Bac +2)</h3>
+                            <p class="timeline-meta">
+                                <strong>ELAN FORMATION</strong> · Mai 2024 – Novembre 2024 · Mulhouse
+                            </p>
+                            <p>Formation certifiante axée sur le développement full-stack : conception d'interfaces utilisateur modernes et développement backend sécurisé.</p>
+                            <ul class="achievements-list">
+                                <li><strong>Développement Frontend :</strong> Maquettage et réalisation d'interfaces utilisateur web et mobile responsive, création de composants dynamiques interactifs</li>
+                                <li><strong>Développement Backend :</strong> Conception et mise en place de bases de données relationnelles (SQL) et NoSQL, développement de composants métier côté serveur</li>
+                                <li><strong>Sécurité :</strong> Développement d'applications web sécurisées avec gestion des authentifications et des données sensibles</li>
+                                <li><strong>DevOps :</strong> Configuration d'environnements de développement, documentation et déploiement d'applications web dynamiques</li>
+                                <li><strong>Gestion de projet :</strong> Méthodologies agiles, versioning Git, et travail collaboratif</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">HTML/CSS/JavaScript</span>
+                                <span class="tag">PHP/Symfony</span>
+                                <span class="tag">SQL/NoSQL</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Git</span>
+                                <span class="tag">API REST</span>
+                            </div>
+                        </div>
+                    </article>
+                    </article>
+
+                    <article class="timeline-item">
+                        <span class="timeline-badge badge-completed" aria-label="Formation terminée">Diplômé</span>
+                        <div class="timeline-content">
+                            <h3>Titre Professionnel Infographe Metteur en Page – Niveau 4 (Bac)</h3>
+                            <p class="timeline-meta">
+                                <strong>GRETA ALSACE SUD</strong> · Octobre 2022 – Mars 2023 · Mulhouse
+                            </p>
+                            <p>Formation certifiante en infographie, PAO et communication visuelle : de la conception graphique à la production de supports print et digital.</p>
+                            <ul class="achievements-list">
+                                <li><strong>Conception graphique :</strong> Analyse des besoins clients, élaboration de propositions graphiques et planification de projets de communication</li>
+                                <li><strong>Production PAO :</strong> Mise en page de documents simples et élaborés (affiches, flyers, magazines, brochures), contrôle qualité et livraison</li>
+                                <li><strong>Communication digitale :</strong> Personnalisation de CMS (WordPress), adaptation de contenus pour le web et les réseaux sociaux</li>
+                                <li><strong>UX/UI Design :</strong> Création de maquettes et mockups avec Figma, application de la théorie des couleurs et des principes d'expérience utilisateur</li>
+                                <li><strong>Veille stratégique :</strong> Suivi des tendances graphiques, techniques et concurrentielles</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Adobe Photoshop</span>
+                                <span class="tag">Adobe Illustrator</span>
+                                <span class="tag">Adobe InDesign</span>
+                                <span class="tag">Figma</span>
+                                <span class="tag">WordPress</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">UX Design</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <span class="timeline-badge badge-completed" aria-label="Formation terminée">Complété</span>
+                        <div class="timeline-content">
+                            <h3>Découverte des Métiers du Numérique – Web & Design</h3>
+                            <p class="timeline-meta">
+                                <strong>ELAN FORMATION</strong> · Novembre 2021 – Avril 2022 · Mulhouse
+                            </p>
+                            <p>Formation préparatoire aux métiers du web : initiation au développement front-end/back-end et à la création graphique digitale.</p>
+                            <ul class="achievements-list">
+                                <li><strong>Développement web :</strong> Initiation au développement de sites dynamiques avec HTML5, CSS3, JavaScript et PHP</li>
+                                <li><strong>Design graphique :</strong> Création de visuels et contenus graphiques avec Adobe Photoshop et Illustrator</li>
+                                <li><strong>UX/UI Design :</strong> Conception de maquettes et prototypes interactifs avec Figma</li>
+                                <li><strong>WordPress :</strong> Création et personnalisation de sites avec intégration de fonctionnalités sur mesure</li>
+                                <li><strong>Projet réalisé :</strong> Développement d'un site e-commerce de vente de thé sur WordPress avec optimisation SEO et design attractif</li>
+                                <li><strong>Gestion de projet :</strong> Méthodologies agiles, GitHub, Trello, diagrammes de Gantt, respect du RGPD</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">HTML/CSS/JavaScript</span>
+                                <span class="tag">PHP/POO</span>
+                                <span class="tag">WordPress</span>
+                                <span class="tag">Figma</span>
+                                <span class="tag">Adobe Suite</span>
+                                <span class="tag">GitHub</span>
+                                <span class="tag">SEO</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION EXPÉRIENCE ==================== -->
+        <section class="experience" id="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <h2 id="experience-title">Expériences Professionnelles</h2>
+                
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Vendeur Polyvalent : Caissier / Vendeur / Magasinier</h3>
+                            <p class="timeline-meta">
+                                <strong>BLACKSTORE FRANCE</strong> · CDI · Avril 2023 – Avril 2024 · 1 an 1 mois · Kingersheim
+                            </p>
+                            <p>Gestion complète du point de vente : de l'ouverture/fermeture du magasin à l'accompagnement client, en passant par la logistique et le merchandising.</p>
+                            <ul class="achievements-list">
+                                <li>Responsabilité des ouvertures et fermetures du magasin (préparation, sécurisation, comptage de caisse)</li>
+                                <li>Gestion complète des opérations en caisse : encaissement, transactions, moyens de paiement et suivi quotidien</li>
+                                <li>Accueil, conseil personnalisé et accompagnement des clients tout au long de leur parcours d'achat</li>
+                                <li>Gestion de la chaîne logistique : réception des colis, étiquetage, organisation en réserve, réapprovisionnement et inventaires</li>
+                                <li>Traitement des retours clients et envoi des produits défectueux aux fournisseurs</li>
+                                <li>Merchandising : implantation et mise en valeur des produits selon les directives visuelles</li>
+                                <li>Résolution des litiges clients pour garantir une expérience d'achat satisfaisante</li>
+                                <li>Mise en place et suivi de la communication interne et digitale du magasin</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Gestion de caisse</span>
+                                <span class="tag">Service client</span>
+                                <span class="tag">Merchandising</span>
+                                <span class="tag">Gestion des stocks</span>
+                                <span class="tag">Résolution de litiges</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Stagiaire Graphisme & Communication Digitale</h3>
+                            <p class="timeline-meta">
+                                <strong>MULHOUSE GAMING</strong> · Stage · Février 2023 – Mars 2023 · 2 mois · Mulhouse
+                            </p>
+                            <p>Création de supports visuels print et digitaux pour promouvoir les événements gaming et renforcer la présence sur les réseaux sociaux.</p>
+                            <ul class="achievements-list">
+                                <li>Conception graphique de supports print : affiches, flyers, kakémonos et banderoles pour événements gaming et tournois esport</li>
+                                <li>Création de contenus visuels pour réseaux sociaux : posts Instagram, Facebook, stories, bannières et visuels promotionnels</li>
+                                <li>Contribution à l'identité visuelle : création de templates graphiques réutilisables et cohérence de la charte graphique</li>
+                                <li>Design de visuels pour événements : annonces de tournois, classements, résultats et animations communautaires</li>
+                                <li>Retouche photo et montage graphique : traitement d'images événementielles et création de visuels attractifs</li>
+                                <li>Adaptation des formats pour différents supports : impression grand format, web et réseaux sociaux</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Adobe Photoshop</span>
+                                <span class="tag">Adobe Illustrator</span>
+                                <span class="tag">Adobe InDesign</span>
+                                <span class="tag">Communication digitale</span>
+                                <span class="tag">Print</span>
+                                <span class="tag">Réseaux sociaux</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Stagiaire Développement Web</h3>
+                            <p class="timeline-meta">
+                                <strong>E-NAUMAD</strong> · Stage · Avril 2022 – Mai 2022 · 2 mois · Mulhouse
+                            </p>
+                            <p>Participation au développement de sites web dynamiques sur wordpress et création de supports visuels pour des projets clients.</p>
+                            <ul class="achievements-list">
+                                <li>Développement de sites web dynamiques en HTML5, CSS3 et PHP</li>
+                                <li>Création et personnalisation de sites WordPress avec intégration de fonctionnalités sur mesure</li>
+                                <li>Conception de maquettes et prototypes interactifs avec Figma</li>
+                                <li>Création de visuels et contenus graphiques avec Photoshop et Illustrator</li>
+                                <li>Développement d'interfaces utilisateurs modernes et responsive</li>
+                                <li>Collaboration en équipe sur des projets web variés</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">WordPress</span>
+                                <span class="tag">Figma</span>
+                                <span class="tag">Adobe Suite</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Vendeur Polyvalent</h3>
+                            <p class="timeline-meta">
+                                <strong>IKEA MULHOUSE</strong> · CDI · Avril 2015 – Août 2021 · 6 ans 5 mois
+                            </p>
+                            <p>Gestion complète du parcours client et de la logistique magasin dans un environnement dynamique et exigeant.</p>
+                            <ul class="achievements-list">
+                                <li>Accueil et conseil personnalisé des clients pour les accompagner dans leurs choix d'achat</li>
+                                <li>Gestion complète des stocks : réception, étiquetage, organisation en réserve et réapprovisionnement des rayons</li>
+                                <li>Merchandising : implantation et mise en valeur des produits selon les directives visuelles</li>
+                                <li>Montage et présentation des nouveaux produits pour optimiser leur visibilité en magasin</li>
+                                <li>Conduite de chariots élévateurs (CACES C1, C5) avec autorisation interne</li>
+                                <li>Réalisation d'inventaires réguliers et gestion des retours produits</li>
+                                <li>Collaboration en équipe pour assurer l'atteinte des objectifs de vente et l'excellence opérationnelle</li>
+                            </ul>
+                            <div class="tags">
+                                <span class="tag">Service client</span>
+                                <span class="tag">Merchandising</span>
+                                <span class="tag">Gestion des stocks</span>
+                                <span class="tag">CACES</span>
+                                <span class="tag">Travail d'équipe</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION PROJETS ==================== -->
+        <section class="projets" id="projets" aria-labelledby="projets-title">
+            <div class="container">
+                <h2 id="projets-title">Projets Réalisés</h2>
+                <p class="section-subtitle">Une sélection de mes réalisations</p>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="IMAGES/the-et-moi-1.jpg" alt="Aperçu du site e-commerce Thé & Moi" loading="lazy">
+                            <span class="project-badge">En cours</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Thé & Moi – Site E-commerce</h3>
+                            <p>Boutique en ligne pour une marque de thés haut de gamme avec WooCommerce.</p>
+                            <div class="tags">
+                                <span class="tag">WordPress</span>
+                                <span class="tag">WooCommerce</span>
+                                <span class="tag">SEO</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="IMAGES/ETIQUETTE - LA DELICIEUSE.png" alt="Étiquette produit La Délicieuse" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>La Délicieuse – Identité Visuelle</h3>
+                            <p>Création d'une étiquette de produit alimentaire conforme à la réglementation.</p>
+                            <div class="tags">
+                                <span class="tag">Illustrator</span>
+                                <span class="tag">Branding</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="IMAGES/Capture site cv.png" alt="Aperçu du CV interactif en ligne" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>CV Interactif en Ligne</h3>
+                            <p>CV web moderne, responsive et accessible avec animations CSS.</p>
+                            <div class="tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <a href="https://github.com/Vehinys/Curriculum-vitae-Web" class="project-link" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="IMAGES/maquette-ui-1.png" alt="Prototype application mobile Cup of Thé" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3>Cup of Thé – App Mobile</h3>
+                            <p>Prototype d'application de découverte et commande de thés avec Figma.</p>
+                            <div class="tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">Prototypage</span>
+                                <span class="tag">UX</span>
+                            </div>
+                            <a href="https://www.figma.com/proto/EuMxE64Ak0yyEOhYrIyV92/Untitled?node-id=42-326" class="project-link" target="_blank" rel="noopener noreferrer">Voir sur Figma</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECTION CONTACT ==================== -->
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">Me Contacter</h2>
+                <p class="section-subtitle">N'hésitez pas à me contacter pour toute opportunité ou question</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <span class="contact-icon" aria-hidden="true">📧</span>
+                        <h3>Email</h3>
+                        <a href="mailto:albert.lecomte1989@gmail.com">albert.lecomte1989@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <span class="contact-icon" aria-hidden="true">📱</span>
+                        <h3>Téléphone</h3>
+                        <a href="tel:+33664249900">+33 6 02 64 24 99</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <span class="contact-icon" aria-hidden="true">💼</span>
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/lecomtealbert" target="_blank" rel="noopener noreferrer">lecomtealbert</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <span class="contact-icon" aria-hidden="true">💻</span>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/Vehinys" target="_blank" rel="noopener noreferrer">Vehinys</a>
+                    </div>
                 </div>
 
-                <!-- Disponibilité -->
-                <div class="profil-availability">
+                <div class="availability-card">
                     <h3>Disponibilité</h3>
-                    <p>
-                        <strong>Statut :</strong> Ouvert aux opportunités<br>
-                        <strong>Type de contrat :</strong> CDI, STAGE<br>
-                        <strong>Télétravail :</strong> Possible (hybride ou full remote)
-                    </p>
+                    <p><strong>Statut :</strong> En formation CDUI (GRETA Alsace Sud)</p>
+                    <p><strong>Recherche :</strong> Stage conventionné gratuit et obligatoire</p>
+                    <p><strong>Télétravail :</strong> Présentiel privilégié · Hybride possible</p>
                 </div>
             </div>
         </section>
-        <!-- Section Formation -->
-        <section class="formation" id="formation">
-            <div class="section-container">
-                <h2>🎓 Formation</h2>
-
-                <div class="formation-item">
-                    <h3>Concepteur Designer UI (CDUI) – Niveau 6 - Status : En cours.</h3>
-                    <p><strong>Établissement :</strong> <b>GRETA ALSACE SUD</b> : <a href="https://www.greta-cfa-alsace.fr/reseau/greta-alsace-sud/" target="_blank">Site</a></p> 
-                    <p><strong>Dates :</strong> Octobre 2025 – Juin 2026</p>
-                    <p>
-                        Formation spécialisée dans la conception d'interfaces utilisateur, la gestion de projet digital, l'UX/UI Design et le développement web. Apprentissage des outils Figma, Adobe XD, HTML/CSS, JavaScript, et méthodes Agile/Scrum.
-                    </p>
-                </div>
-
-                <div class="formation-item">
-                    <h3>Développeur Web et Web Mobile – Niveau 5 - Status : Acquis.</h3>
-                    <p><strong>Établissement :</strong> <b>ELAN FORMATION </b> : <a href="https://elan-formation.fr/accueil" target="_blank">Site</a></p> 
-                    <p><strong>Dates :</strong> Mai 2024 – Novembre 2024</p>
-                    <p>
-                        <b><u>Installer et configurer son environnement de travail en fonction du projet web ou web mobile</u></b><br>
-
-                        • Maquetter des interfaces utilisateur web ou web mobile<br>
-                        • Réaliser des interfaces utilisateur statiques web ou web mobile<br>
-                        • Développer la partie dynamique des interfaces utilisateur web ou web mobile<br><br>
-
-                        <b><u>Développer la partie backend d'une application web ou web mobile sécurisée :</u></b><br>
-
-                        • Mettre en place une base de données relationnelle<br>
-                        • Développer des composants d'accès aux données SQL et NoSQL<br>
-                        • Développer des composants métier coté serveur<br>
-                        • Documenter le déploiement d'une application dynamique web ou web mobile<br>
-                    </p>
-                </div>
-
-                <div class="formation-item">
-                    <h3>IMEP : Infographie Metteur En Page – Niveau 4 - Status : Acquis.</h3>
-                    <p><strong>Établissement :</strong> <b>GRETA ALSACE SUD</b> : <a href="https://www.greta-cfa-alsace.fr/reseau/greta-alsace-sud/" target="_blank">Site</a></p> 
-                    <p><strong>Dates :</strong> Octobre 2022 - Mars 2023</p>
-                    <p>
-                        <b><u>Élaborer une proposition graphique :</u></b> <br><br>
-
-                        • Recueillir et analyser les besoins client <br>
-                        • Définir une solution graphique <br>
-                        • Planifier et organiser la réalisation de supports de communication<br><br>
-
-                        <b><u>Réaliser des supports de communication :</u> </b><br>
-
-                        • Mettre en page des documents simples <br>
-                        • Mettre en page des documents élaborés <br>
-                        • Contrôler la conformité du produit et vérifier la livraison<br><br>
-
-                        <b><u>Contribuer à la stratégie de communication :</u></b> <br>
-
-                        • Assurer une veille technique, technologique et concurrentielle<br>
-                        • Promouvoir une réalisation graphique <br>
-                        • Personnaliser un système de gestion dynamique de contenus de sites web<br>
-                        • Adapter des contenus pour le web et les réseaux sociaux<br>
-                    </p>
-                </div>
-
-              <div class="formation-item">
-                    <h3> Découverte du métier du numerique [ Web & Design ] – Niveau : Non diplômante.</h3>
-                    <p><strong>Établissement :</strong> <b>ELAN FORMATION</b> : <a href="https://elan-formation.fr/accueil" target="_blank">Site</a></p> 
-                    <p><strong>Dates :</strong>  Novembre 2021 - Avril 2022</p>
-                    <p>
-                        • Initiation au développement de sites web dynamiques en utilisant HTML5, CSS3, JS et PHP.<br>
-
-                        • Création de visuels et de contenus graphiques à l'aide d'Adobe Photoshop et Illustrator.<br>
-
-                        • Conception de maquettes et de prototypes interactifs grâce à FIGMA.<br>
-
-                        • Contribution à la création et la modification de sites sous WordPress, en intégrant des fonctionnalités personnalisées.<br>
-
-                        - Projet notable : Développement d'un site de vente de thé sur Wordpress, incluant l'optimisation SEO et la création d'un design attrayant.<br>
-
-                        • Collaboration avec l'équipe pour développer des interfaces utilisateurs modernes et fonctionnelles.<br>
-
-                        • Développement des compétences en travail d'équipe et en communication pour établir des relations professionnelles solides.<br>
-
-                        • Amélioration des compétences en langages de programmation à travers des projets pratiques.<br>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="soft-skills">
-  <h2>🧠 Compétences Comportementales</h2>
-  
-  <div class="soft-skills-grid">
-    
-    <div class="soft-skill-item">
-      <h3>🎨 Créativité & Innovation</h3>
-      <p>Capacité à proposer des solutions visuelles originales et à sortir 
-      des sentiers battus tout en respectant les contraintes du brief.</p>
-      <span class="example">→ Conception de l'identité visuelle "La Délicieuse" 
-      avec respect des normes légales et création d'un univers graphique unique</span>
-    </div>
-    
-    <div class="soft-skill-item">
-      <h3>🤝 Collaboration & Communication</h3>
-      <p>Travail en synergie avec développeurs, chefs de projet et clients. 
-      Capacité à traduire les besoins métiers en solutions design.</p>
-      <span class="example">→ Collaboration étroite avec l'équipe pédagogique 
-      chez Blackstore pour développer un outil de gestion sur-mesure</span>
-    </div>
-    
-    <div class="soft-skill-item">
-      <h3>🔄 Adaptabilité & Agilité</h3>
-      <p>Flexibilité face aux changements de direction projet et capacité à 
-      jongler entre missions variées (print, web, mobile).</p>
-      <span class="example">→ Transition réussie du retail (Ikea 6 ans) vers 
-      le digital en intégrant rapidement les méthodologies Agile/Scrum</span>
-    </div>
-    
-    <div class="soft-skill-item">
-      <h3>🎯 Rigueur & Sens du détail</h3>
-      <p>Attention méticuleuse aux aspects visuels (alignement, typographie, 
-      couleurs) et aux normes d'accessibilité web.</p>
-      <span class="example">→ Intégration pixel-perfect du CV en HTML/CSS avec 
-      menu hamburger et optimisation responsive</span>
-    </div>
-    
-    <div class="soft-skill-item">
-      <h3>🚀 Autonomie & Initiative</h3>
-      <p>Capacité à mener des projets de A à Z avec peu de supervision, tout 
-      en sachant demander conseil au bon moment.</p>
-      <span class="example">→ Développement autonome d'un tableau de bord PHP/MySQL 
-      chez Blackstore, de l'analyse des besoins au déploiement</span>
-    </div>
-    
-    <div class="soft-skill-item">
-      <h3>🔍 Curiosité & Veille</h3>
-      <p>Apprentissage continu des nouvelles tendances UI/UX, outils et 
-      méthodologies. Benchmark régulier des best practices.</p>
-      <span class="example">→ Formations successives (IMEP → Dev Web → CDUI) 
-      démontrant une soif d'apprendre constante</span>
-    </div>
-    
-    <div class="soft-skill-item">
-      <h3>🧩 Résolution de problèmes</h3>
-      <p>Approche analytique pour identifier les enjeux UX et proposer des 
-      solutions design adaptées aux utilisateurs.</p>
-      <span class="example">→ Refonte d'interfaces WordPress avec amélioration 
-      de l'expérience utilisateur et du parcours d'achat</span>
-    </div>
-    
-    <div class="soft-skill-item">
-      <h3>⏱️ Gestion du temps</h3>
-      <p>Organisation efficace pour respecter les deadlines et gérer plusieurs 
-      projets en parallèle.</p>
-      <span class="example">→ Jonglage entre formation intensive et projets 
-      personnels (site CV, maquettes Figma, projets WordPress)</span>
-    </div>
-    
-  </div>
-</section>
-
-
-        <!-- Section Expérience -->
-        <section class="experience" id="experience">
-          <div class="section-container">
-            <h2>💼 Expériences Professionnelles</h2>
-            <div class="experience-item">
-                <h3>VENDEUR POLYVALENT</h3>
-                <p><strong>Établissement :</strong> <b>BLACKSTORE </b> - CDI  : <a href="https://www.blackstore.fr/" target="_blank">Site</a></p>
-                <p><strong>Dates :</strong> Avril 2023 – Avril 2024</p>
-                <p>
-                    • Réalisation d'un tableau de bord interne avec PHP et MySQL pour la gestion des formations.<br>
-                    • Utilisation de Bootstrap et JavaScript pour créer des interfaces dynamiques.<br>
-                    • Collaboration avec l'équipe pédagogique pour répondre aux besoins métiers.<br>
-                    • Tests, documentation technique, et mise en ligne en environnement local.
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <h3>STAGE EN GRAPHISME</h3>
-                <p><strong>Association :</strong> <b>Mulhouse Gaming </b> - STAGE  :<a href="https://mulhousegaming.fr/" target="_blank">Site</a></p>
-                <p><strong>Dates :</strong> Fevrier 2023 – Mars 2023</p>
-                <p>
-                    • Création de supports de communication graphique (affiches, flyers, visuels réseaux sociaux).
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <h3>STAGE EN DEVELOPPEMENT WEB</h3>
-                <p><strong>Établissement :</strong> <b>E-NAUMAD :</b> - STAGE  <a href="https://www.e-naumad.fr/" target="_blank">Site</a></p>
-                <p><strong>Dates :</strong> Avril 2022 – Mai 2022</p>
-                <p>
-                    • Création de supports de communication graphique (affiches, flyers, visuels réseaux sociaux).<br>
-                    • Gestion du site WordPress des clients de l'entreprise (mise à jour de contenu, maintenance).<br>
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <h3> VENDEUR POLYVALENT </h3>
-                <p><strong>Établissement :</strong> <b>IKEA MULHOUSE</b> - CDI  : <a href="https://www.ikea.com/fr/fr/stores/mulhouse/" target="_blank">Site</a></p>
-                <p><strong>Dates :</strong> Avril 2015 – Aout 2021</p>
-                <p>
-                    • Réalisation de supports de communication print et web (plaquettes, kakemonos, bannières).<br>
-                    • Utilisation de la suite Adobe (Photoshop, Illustrator, InDesign) pour la mise en page et le design.<br>
-                    • Participation à la création de contenus pour les réseaux sociaux et newsletters internes.<br>
-                    • Suivi de la charte graphique et adaptation des visuels selon les besoins.
-                </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Section Compétences -->
-        <section class="competences" id="competences">
-            <div class="section-container">
-                <h2>🛠️ Compétences</h2>
-
-                <!-- Compétences techniques -->
-                <div class="competence-category">
-                    <h3>💻 Développement Web</h3>
-                    <ul>
-                        <li>HTML5 / CSS3 / JavaScript</li>
-                        <li>PHP / Symfony</li>
-                        <li>MySQL / SQL </li>
-                        <li>Bootstrap / Tailwind CSS</li>
-                        <li>GitHub</li>
-                        <li>WordPress (Création, Personnalisation, SEO)</li>
-                    </ul>
-                </div>
-
-                <div class="competence-category">
-                    <h3>🎨 Design & UI/UX</h3>
-                    <ul>
-                        <li>Figma (Wireframes, Prototypes, Design System)</li>
-                        <li>Photoshop / Illustrator / InDesign / Premiere pro / XD </li>
-                        <li>Création de supports de communication (print & digital)</li>
-                        <li>Maquettage et ergonomie web</li>
-                    </ul>
-                </div>
-
-                <div class="competence-category">
-                    <h3>📂 Gestion de projet</h3>
-                    <ul>
-                        <li>Méthodes Agile / Scrum</li>
-                        <li>Suivi de projet (tableaux de bord, rétroplanning)</li>
-                        <li>Collaboration interdisciplinaire (dév, design, client)</li>
-                        <li>Outils : Trello, Gantt Project</li>
-                    </ul>
-                </div>
-
-                <!-- Compétences transversales -->
-                <div class="competence-category">
-                    <h3>🧠 Soft Skills</h3>
-                    <ul>
-                        <li>Autonomie & prise d'initiative</li>
-                        <li>Créativité & sens de l'esthétique</li>
-                        <li>Capacité d'adaptation et apprentissage rapide</li>
-                        <li>Travail en équipe & gestion du temps</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section Projets -->
-        <section class="projets" id="projets">
-            <div class="section-container">
-                <h2>🚀 Projets</h2>
-
-                <!-- Projet 1 -->
-                <div class="projet-item">
-                    <h3> & – Site WordPress - [En cours]</h3>
-                    <p>
-                        Site WordPress.
-                    </p>
-                    <p><strong>Technos :</strong> WordPress, WooCommerce, Elementor, Divi</p>
-                    <div class="galerie-images">
-                        <img src="IMAGES/the-et-moi-1.jpg" alt="Capture écran 1">
-                        <img src="IMAGES/the-et-moi-2.jpg" alt="Capture écran 2">
-                        <img src="IMAGES/the-et-moi-3.jpg" alt="Capture écran 3">
-                    </div>
-                    <div class="projet-links">
-                        <a href="https://github.com/Vehinys" target="_blank">📂 GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Projet 2 -->
-                <div class="projet-item">
-                    <h3> Illustrator - La délicieuse </h3>
-                    <p>
-                        Création d'une étiquette pour un client fictif avec notion de charte graphique et obligation légal
-                    </p>
-                    <p><strong>Technos :</strong> Illustrator </p>
-                    <div class="galerie-images">
-                        <img src="IMAGES/ETIQUETTE - LA DELICIEUSE.png" alt="Capture écran Dashboard 1">
-                        <img src="IMAGES/LA DELICIEUSE.png" alt="Capture écran Dashboard 2">
-                    </div>
-                    <div class="projet-links">
-                        <span>🔒 Projet local</span>
-                    </div>
-                </div> 
-
-                <!-- Projet 3 -->
-                <div class="projet-item">
-                    <h3>Curriculum vitæ</h3>
-                    <p>
-                        Développement de ce Curriculum vitæ en HTML/CSS/JS. Responsive, moderne, structuré pour valoriser mes compétences.
-                    </p>
-                    <p><strong>Technos :</strong> HTML5, CSS3, JavaScript</p>
-                    <p><strong>Spécifisitée :</strong> Menu hamburger, back-to-top</p>
-                    <div class="galerie-images">
-                        <img src="IMAGES/Capture site cv.png" alt="Capture écran du site CV">
-                    </div>
-                    <div class="projet-links">
-                        <a href="https://github.com/Vehinys/Curriculum-vitae-Web" target="_blank">📂 GitHub</a>
-                    </div>
-                </div>
-
-                <!-- Projet 4 -->
-                <div class="projet-item">
-                    <h3>Maquette - Figma</h3>
-                    <p>
-                        Prototype Figma d'une application de Thé (Cup of thé). Travail sur le parcours utilisateur et interactions sur téléphone.
-                    </p>
-                    <p><strong>Technos :</strong> Figma</p>
-                    <div class="galerie-images">
-                        <img src="IMAGES/maquette-ui-1.png" alt="Capture écran Maquette UI 1">
-                        <img src="IMAGES/maquette-ui-2.png" alt="Capture écran Maquette UI 2">
-
-                    </div>
-                    <div class="projet-links">
-                        <a href="https://www.figma.com/proto/EuMxE64Ak0yyEOhYrIyV92/Untitled?node-id=42-326&starting-point-node-id=42%3A326&t=Jt1M2nV9jwwd683G-1" target="_blank">🎨 Voir sur Figma</a>
-                    </div>
-                </div>
-
-                <!-- Projet 5 -->
-                <div class="projet-item">
-                    <h3> Photoshop - Maquette </h3>
-                    <p>
-                        Création d'une reproduction d'un maquette d'un site vitrine.
-                    </p>
-                    <p><strong>Technos :</strong> Illustrator </p>
-                    <div class="galerie-images">
-                        <img src="IMAGES/capture photoshop - maquette 1.png" alt="photoshop - maquette 1">
-                        <img src="IMAGES/capture photoshop - maquette 2.png" alt="photoshop - maquette 2">
-                    </div>
-                    <div class="projet-links">
-                        <span>🔒 Projet local</span>
-                    </div>
-                </div> 
-
-            </div>
-        </section>
-
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="#profil">Profil</a></li>
-                    <li><a href="#experience">Expérience</a></li>
-                    <li><a href="#formation">Formation</a></li>
-                </ul>
-            </div>
+    <!-- ==================== FOOTER ==================== -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h2 class="footer-title">Albert Lecomte</h2>
+                    <p>Concepteur Designer UI<br>Mulhouse, France</p>
+                </div>
 
-            <div class="footer-section">
-                <h3>Sections</h3>
-                <ul>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <!-- <li><a href="IMAGES\MOI.jpg" target="_blank">Curriculum vitae</a></li> -->
-                </ul>
-            </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#profil">Profil</a></li>
+                        <li><a href="#soft-skills">Compétences</a></li>
+                        <li><a href="#formation">Formation</a></li>
+                        <li><a href="#experience">Expérience</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-section">
-                <h3>Réseaux</h3>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/lecomtealbert" target="_blank" title="LinkedIn"> <p style="color:white "><strong>In</string></p>
-                    </a>
-                    <a href="https://github.com/Vehinys" target="_blank" title="GitHub">
-                        <img src="IMAGES/github-50.png" alt="GitHub">
-                    </a>
+                <div class="footer-section">
+                    <h3>Réseaux</h3>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/lecomtealbert" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Albert Lecomte">
+                            <span aria-hidden="true">in</span>
+                        </a>
+                        <a href="https://github.com/Vehinys" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub d'Albert Lecomte">
+                            <span aria-hidden="true">{ }</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 <span>Albert Lecomte</span> - Tous droits réservés</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Albert Lecomte. Tous droits réservés.</p>
+                <p class="footer-legal">
+                    <small>
+                        Les données personnelles présentes sur ce site sont fournies volontairement. 
+                        Aucun cookie de suivi n'est utilisé. Conformité RGPD.
+                    </small>
+                </p>
+            </div>
         </div>
     </footer>
 
+    <!-- Bouton retour en haut -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">
+        <span aria-hidden="true">↑</span>
+    </button>
+
     <!-- Scripts JavaScript -->
-    <script src="burger-menu.js"></script>
-    <script src="back-to-top.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
